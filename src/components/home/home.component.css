@@ -1,0 +1,17 @@
+a {
+  cursor: pointer;
+}
+
+mat-card {
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+p {
+  color: red;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 10px;
+}

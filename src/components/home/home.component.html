@@ -1,0 +1,21 @@
+<input (keyup)="onKey($event)" />
+
+<p *ngIf="usersUnavailable">No users available</p>
+
+<mat-list>
+  <mat-list-item *ngFor="let user of users"
+    ><a (click)="getUserData(user.id, user.name)">{{
+      user.name
+    }}</a></mat-list-item
+  >
+</mat-list>
+
+<mat-card *ngIf="displayContent">
+  <p>{{ selectedUser }}</p>
+  <div *ngFor="let data of todoData">
+    <mat-card-header>
+      <mat-card-title>{{ data.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>{{ data.completed }}</mat-card-content>
+  </div>
+</mat-card>
